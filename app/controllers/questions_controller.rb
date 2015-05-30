@@ -61,6 +61,13 @@ class QuestionsController < ApplicationController
     end
   end
 
+
+
+  def import
+      Question.import(params[:file])
+      redirect_to root_url, notice: "Questions  imported."
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_question

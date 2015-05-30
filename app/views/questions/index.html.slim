@@ -31,3 +31,9 @@ table.table.table-striped
 br
 
 = link_to 'New Question', new_question_path , class: 'btn btn-default'
+
+br
+
+=form_tag import_questions_path , multipart: true do
+  =file_field_tag :file 
+  =submit_tag "import"
