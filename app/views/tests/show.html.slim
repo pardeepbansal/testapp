@@ -1,0 +1,16 @@
+h1 =@test.title
+
+
+table.table.table-striped
+	thead
+		tr
+			th Title
+		
+
+p
+  strong Title:
+  = @test.title
+
+= link_to 'Edit', edit_test_path(@test)
+'|
+= link_to 'Back', tests_path

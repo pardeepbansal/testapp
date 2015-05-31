@@ -1,0 +1,21 @@
+h1 Listing all tests
+
+table.table.table-striped
+  thead
+    tr
+      th Title
+      th
+      th
+      th
+
+  tbody
+    - @tests.each do |test|
+      tr
+        td = link_to test.title ,test
+        td = link_to 'Show', test
+        td = link_to 'Edit', edit_test_path(test)
+        td = link_to 'Destroy', test, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Test', new_test_path

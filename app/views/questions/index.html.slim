@@ -24,9 +24,10 @@ table.table.table-striped
         td = question.d
         td = question.e
         td = question.answer
-        td = link_to 'Show', question
-        td = link_to 'Edit', edit_question_path(question)
-        td = link_to 'Destroy', question, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td = link_to 'Show', question ,class: 'btn btn-primary btn-xs'
+        td = link_to 'Edit', edit_question_path(question) ,class: 'btn btn-default btn-xs'
+
+        td = link_to 'Destroy', question, data: {:confirm => 'Are you sure?'}, :method => :delete ,class: 'btn btn-danger btn-xs'
 
 br
 
